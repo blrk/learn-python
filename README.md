@@ -75,6 +75,76 @@ x and y is  3
 print("x and y is ", x or y)
 x and y is  2
 
+print("Bitwise XOR ", x^y)
+Bitwise XOR  4
+
+print("Bitwise XOR ", x|y)
+Bitwise XOR  6
+
+print("Bitwise XOR ", x>>2)
+Bitwise XOR  1
+
+print("Bitwise XOR ", x<<2)
+Bitwise XOR  24
+
+identity operator
+a=5
+
+a is 5
+Out[12]: True
+
+a is 6
+Out[13]: False
+
+a is not 5
+Out[14]: False
+x=[1,2,3,4,5]
+
+4 in x
+Out[16]: True
+
+7 in x
+Out[17]: False
+(4 + 2 ** 2) / 2 + (4 * 3 +6 / 2)
+Out[18]: 19.0
+
+a=3+12j
+
+b=4+25j
+
+a+b
+Out[24]: (7+37j)
+
+str1 = "hello"
+
+str2 = "welcome"
+
+print(str1+str2)
+hellowelcome
+
+print(str1 * 3)
+hellohellohello
+
+print(str1,  str2)
+hello welcome
+
+print(str1 + str2)
+hellowelcome
+
+print(str1   +   str2)
+hellowelcome
+
+print(str1*2)
+hellohello
+
+print(str1*2, str2*3)
+hellohello welcomewelcomewelcome
+
+print(str1[2:4])
+ll
+
+print(str1[2])
+l
 
 
 
