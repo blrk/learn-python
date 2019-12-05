@@ -146,6 +146,16 @@ ll
 print(str1[2])
 l
 
+tuple
+my_sbj=('c++', 'Java', 'Python', 'R')
 
+my_sbj
+Out[43]: ('c++', 'Java', 'Python', 'R')
+print(my_sbj + ('Dart', 'Swift'))
+('c++', 'Java', 'Python', 'R', 'Dart', 'Swift')
+x_sub=('datasci','cloud')
+
+print(my_sbj + x_sub)
+('c++', 'Java', 'Python', 'R', 'datasci', 'cloud')
 
 </pre>
