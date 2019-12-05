@@ -175,4 +175,103 @@ Out[56]: 1
 
 list1[0:3]
 Out[57]: [1, 'a', 2]
+
+type(list1)
+Out[58]: list
+#append()
+
+list1.append("x")
+
+list1
+Out[61]: [1, 'a', 2, 7, 'x']
+
+list1.extend(['s','g'])
+
+
+list1
+Out[63]: [1, 'a', 2, 7, 'x', 's', 'g']
+
+list1
+Out[63]: [1, 'a', 2, 7, 'x', 's', 'g']
+
+list2=[8,9]
+
+list1.extend(list2)
+
+list1
+Out[66]: [1, 'a', 2, 7, 'x', 's', 'g', 8, 9]
+list1.insert(1,'tt')
+
+list1
+Out[69]: [1, 'tt', 'a', 2, 7, 'x', 's', 'g', 8, 9]
+list1.pop()
+Out[70]: 9
+
+list1.pop(1)
+Out[71]: 'tt'
+
+list1
+Out[73]: [1, 'a', 2, 7, 'x', 's', 'g', 8]
+
+mydict={1:'Apple', 2:'Mango', 3:'Orange'}
+
+mydict
+Out[78]: {1: 'Apple', 2: 'Mango', 3: 'Orange'}
+
+mydict1 = {'name':'John', 1:[2,4,6]}
+
+mydict1
+
+Out[85]: {'name': 'John', 1: [2, 4, 6]}
+
+emp = {'name':'JOhn', 'Add':['xyx','abc']}
+
+emp
+Out[87]: {'name': 'JOhn', 'Add': ['xyx', 'abc']}
+len(mydict)
+Out[89]: 3
+
+len(emp)
+Out[90]: 2
+mydict1.keys()
+Out[91]: dict_keys(['name', 1])
+
+mydict1.keys()
+Out[91]: dict_keys(['name', 1])
+
+mydict1.values()
+Out[92]: dict_values(['John', [2, 4, 6]])
+
+mydict1.items()
+Out[93]: dict_items([('name', 'John'), (1, [2, 4, 6])])
+
+mydict1.update({3:'profile'})
+
+mydict1
+Out[97]: {'name': 'John', 1: [2, 4, 6], 3: 'profile'}
+
+n [97]: mydict1
+Out[97]: {'name': 'John', 1: [2, 4, 6], 3: 'profile'}
+
+mydict1.pop('name')
+Out[98]: 'John'
+
+mydict1
+Out[99]: {1: [2, 4, 6], 3: 'profile'}
+
+my_set1 = {1,2,3,4,4,5,5,6}
+
+my_set1
+Out[102]: {1, 2, 3, 4, 5, 6}
+
+my_set2={7,5,4,4,6}
+
+my_set1 | my_set2
+Out[104]: {1, 2, 3, 4, 5, 6, 7}
+
+my_set1 & my_set2
+Out[105]: {4, 5, 6}
+
+
+
 </pre>
