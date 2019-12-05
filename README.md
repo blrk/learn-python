@@ -43,4 +43,28 @@ story_no=12
 
 print("welcome to " + story_name + " it sno is ", story_no)
 welcome to harry it sno is  12
+
+a=2
+
+b=3
+
+c=a+b
+
+c
+Out[26]: 5
+
+x=10
+
+x/5
+Out[28]: 2.0
+
+num1=3
+
+num2=5
+
+print("num1 > mum2 ?", num1>num2)
+num1 > mum2 ? False
+
+
+
 </pre>
