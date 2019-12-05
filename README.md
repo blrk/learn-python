@@ -157,5 +157,7 @@ x_sub=('datasci','cloud')
 
 print(my_sbj + x_sub)
 ('c++', 'Java', 'Python', 'R', 'datasci', 'cloud')
+print(x_sub * 2)
+('datasci', 'cloud', 'datasci', 'cloud')
 
 </pre>
