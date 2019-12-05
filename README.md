@@ -65,6 +65,17 @@ num2=5
 print("num1 > mum2 ?", num1>num2)
 num1 > mum2 ? False
 
+x=2
+
+y=3
+
+print("x and y is ", x and y)
+x and y is  3
+
+print("x and y is ", x or y)
+x and y is  2
+
+
 
 
 </pre>
