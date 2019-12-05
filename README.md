@@ -159,5 +159,20 @@ print(my_sbj + x_sub)
 ('c++', 'Java', 'Python', 'R', 'datasci', 'cloud')
 print(x_sub * 2)
 ('datasci', 'cloud', 'datasci', 'cloud')
+my_sbj[0]
+Out[50]: 'c++'
 
+my_sbj[1:3]
+Out[51]: ('Java', 'Python')
+
+list1=[1,'a',2,7]
+
+list1
+Out[53]: [1, 'a', 2, 7]
+
+list1[0]
+Out[56]: 1
+
+list1[0:3]
+Out[57]: [1, 'a', 2]
 </pre>
