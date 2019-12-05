@@ -1,3 +1,4 @@
+<pre>
 a=2
 
 b=3
@@ -42,3 +43,4 @@ story_no=12
 
 print("welcome to " + story_name + " it sno is ", story_no)
 welcome to harry it sno is  12
+</pre>
