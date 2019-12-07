@@ -14,3 +14,14 @@ Iam python
 Iam python
 </pre>
 
+<pre>
+>>> for i in range(1+3):
+...    print("I am python")
+... 
+I am python
+I am python
+I am python
+I am python
+</pre>
+
+<li> Print a multiplication table</li>
