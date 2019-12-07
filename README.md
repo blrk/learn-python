@@ -272,6 +272,41 @@ Out[104]: {1, 2, 3, 4, 5, 6, 7}
 my_set1 & my_set2
 Out[105]: {4, 5, 6}
 
-
+>>> print("hello")
+hello
+>>> print("\'hello\'")
+'hello'
+>>> print("\"hello\"")
+"hello"
+>>> print("\\hello\\")
+\hello\
+>>> " " * 5 + "hi"
+'     hi'
+>>> " " * 10 + "hi"
+'          hi'
+>>> halt!=10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'halt' is not defined
+>>> ord('a')
+97
+>>> ord('A')
+65
+>>> chr(65)
+'A'
+>>> a=10
+>>> b=2
+>>> a//b
+5
+>>> a/b
+5.0
+>>> x=input("enter the value of x")
+enter the value of x5
+>>> x
+'5'
+>>> x=float(input("enter the value of x"))
+enter the value of x5
+>>> x
+5.0
 
 </pre>
