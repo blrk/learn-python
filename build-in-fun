@@ -1,3 +1,5 @@
+<li>Python includes many useful functions, which are organized in libraries of code called modules.</li>
+<li>What is function?
 <pre>
 import math
 
@@ -59,4 +61,20 @@ Out[7]:
  'tanh',
  'tau',
  'trunc']
+ 
+ help(math.cos)
+Help on built-in function cos in module math:
+
+cos(x, /)
+    Return the cosine of x (measured in radians).
+ </pre>
+ 
+ <pre>
+ #import math
+
+#print(math.pi)
+
+from math import pi, sqrt, cos
+
+print(sqrt(5))
  </pre>
