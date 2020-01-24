@@ -1,3 +1,4 @@
+<pre>
 >>> f1 = open("mydata.txt", 'w')
 >>> f1.write("First Line \n Second line")
 24
@@ -276,6 +277,31 @@ tuple is immutable
 >>> sum(1,2)
 3
 
+=============main function===============
+def main():
+    print("Main execution started")
+    print("sum is:",add(10,2))
+    print("Adult:",isAdult(16))
+    print("Adult:",isAdult(20))
+
+def add(a, b):
+    return(a + b)
+
+def isAdult(age):
+    if age > 17:
+        return True
+    else:
+        return False
+# program entry point
+main()
+
+(base) blrk@rk-lpc:~/python> python3.7 fun.py 
+Main execution started
+sum is: 12
+Adult: False
+Adult: True
+
+</pre>
 
 
  
