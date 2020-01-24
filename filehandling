@@ -1,0 +1,281 @@
+>>> f1 = open("mydata.txt", 'w')
+>>> f1.write("First Line \n Second line")
+24
+>>> f1.close()
+
+(base) blrk@rk-lpc:~/python> cat mydata.txt 
+First Line 
+ Second line(base)
+ 
+vi wnum2file.py
+ 
+ import random
+  
+f2 = open("numbers.txt", 'w')
+for i in range(10):
+    n = random.randint(1,10)
+    f2.write(str(n) + "\n")
+
+f2.close()
+
+(base) blrk@rk-lpc:~/python> cat numbers.txt 
+2
+5
+1
+9
+8
+6
+10
+10
+4
+1
+
+Reading Text from a File
+
+>>> f1 = open("mydata.txt", 'r')
+>>> data = f1.read()
+>>> data
+'First Line \n Second line'
+>>> print(data)
+First Line 
+ Second line
+ >>> f1.close()
+ 
+ Alternative 
+ 
+ >>> f1 = open("mydata.txt", 'r')
+>>> for data in f1:
+...     print(data)
+... 
+First Line 
+
+ Second line
+>>> f1.close()
+
+alternative 
+
+>>> f1 = open("mydata.txt", 'r')
+>>> while True:
+...     data = f1.readline()
+...     if data == "":
+...             break
+...     print(data)
+... 
+First Line 
+
+ Second line
+===================================
+Reading Numbers from a File
+
+vi rnumffile.py 
+
+f2 = open("numbers.txt", 'r')
+  
+for n in f2:
+    n = n.strip()
+    num = int(n)
+    print(num)
+
+f2.close()
+
+(base) blrk@rk-lpc:~/python> python3.7 rnumffile.py 
+2
+5
+1
+9
+8
+6
+10
+10
+4
+1
+
+Alternate ========== numbers seperated by spaces =========
+
+vi demornum.py
+
+f2 = open("numbers.txt", 'r')
+
+for line in f2:
+    wordlist = line.split()
+    for word in wordlist:
+        n = int(word)
+        print(n)
+f2.close()
+
+(base) blrk@rk-lpc:~/python> python3.7 demornum.py 
+2
+5
+1
+9
+8
+6
+10
+10
+4
+1
+
+=======================
+list is s group of values
+
+>>> list1 = [1,2,3,4,5]
+>>> list1
+[1, 2, 3, 4, 5]
+
+>>> list2 = list(range(1,5))
+>>> list2
+[1, 2, 3, 4]
+>>> list3 = list(range(0,10))
+>>> list3
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+>>> fruits = ["apple", "orange", "mango"]
+>>> fruits
+['apple', 'orange', 'mango']
+
+===========len=====================
+>>> len(list1)
+5
+>>> len(list3)
+10
+>>> len(fruits)
+3
+
+==========access ====================
+>>> fruits[0]
+'apple'
+>>> fruits[1:3]
+['orange', 'mango']
+
+======== concat and equality ============
+>>> list1
+[1, 2, 3, 4, 5]
+>>> list2
+[1, 2, 3, 4]
+>>> list1 == list2
+False
+
+>>> list2 = list2 + [5]
+>>> list2
+[1, 2, 3, 4, 5]
+>>> list1 == list2
+True
+
+>>> 2 in list2
+True
+
+============Replacing an Element in a List=================
+>>> list2[3] = -1
+>>> list2
+[1, 2, 3, -1, 5]
+
+>>> list2[0:2] = [-2, -3 , -9]
+>>> list2
+[-2, -3, -9, 3, -1, 5]
+
+=========playing with strings============
+>>> sentence = "apple orange mango kiwi"
+>>> fruits = sentence.split()
+>>> fruits
+['apple', 'orange', 'mango', 'kiwi']
+
+>>> i = 0
+>>> while i < len(fruits):
+...     fruits[i] = fruits[i].upper()
+...     i = i + 1
+... 
+>>> fruits
+['APPLE', 'ORANGE', 'MANGO', 'KIWI']
+
+=============list methods ===================
+
+>>> numbers = list(range(7))
+>>> numbers
+[0, 1, 2, 3, 4, 5, 6]
+>>> numbers.pop()
+6
+>>> numbers
+[0, 1, 2, 3, 4, 5]
+
+>>> numbers.pop(3)
+3
+>>> numbers
+[0, 1, 2, 4, 5]
+
+>>> numbers.insert(3,-9)
+>>> numbers
+[0, 1, 2, -9, 4, 5]
+>>> numbers.append(-8)
+>>> numbers
+[0, 1, 2, -9, 4, 5, -8]
+>>> mynum = [99,98,97]
+>>> mynum
+[99, 98, 97]
+>>> numbers.extend(mynum)
+>>> numbers
+[0, 1, 2, -9, 4, 5, -8, 99, 98, 97]
+
+============== searching a list==================
+>>> numbers
+[0, 1, 2, -9, 4, 5, -8, 99, 98, 97]
+>>> element = -8
+>>> element in numbers
+True
+>>> numbers.index(element)
+6
+
+>>> if element in numbers:
+...     print(numbers.index(element))
+... else:
+...     print("element not available")
+... 
+6
+
+============Sorting a List================
+>>> numbers
+[0, 1, 2, -9, 4, 5, -8, 99, 98, 97]
+>>> numbers.sort()
+>>> numbers
+[-9, -8, 0, 1, 2, 4, 5, 97, 98, 99]
+
+===============Mutator Methods and the Value None==================
+Mutator  --> only to modify the internal state
+
+>>> numbers = [0, 1, 2, -9, 4, 5, -8, 99, 98, 97]
+>>> numbers
+[0, 1, 2, -9, 4, 5, -8, 99, 98, 97]
+>>> numbers = numbers.sort()
+>>> numbers
+
+============Aliasing and Side Effects===================
+>>> list1 = list(range(5))
+>>> list2 = list1
+>>> list2
+[0, 1, 2, 3, 4]
+>>> list2.append(9)
+>>> list1
+[0, 1, 2, 3, 4, 9]
+
+============Tuples =====================
+tuple is immutable
+
+>>> fruit = ("apple", "orange")
+>>> meat = ("mutton", "chicken")
+>>> fruit
+('apple', 'orange')
+>>> meat
+('mutton', 'chicken')
+>>> eat = fruit + meat
+>>> eat
+('apple', 'orange', 'mutton', 'chicken')
+
+================Defining Simple Functions=================
+>>> def sum(a, b):
+...     return a + b
+... 
+>>> sum(1,2)
+3
+
+
+
+ 
